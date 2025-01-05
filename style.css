@@ -1,0 +1,675 @@
+/*Fonts - titulos*/
+@font-face {
+    font-family: 'CitadelScriptStd';
+    src: url('./fonts/CitadelScriptStd.otf') format('opentype'); /* Asegúrate de usar la extensión correcta */
+    font-weight: 700; /* Ajusta el peso si es necesario */
+}
+
+
+/*Fonts - cuerpo*/
+@font-face {
+    font-family: 'SnellBT-Bold';
+    src: url('./fonts/SnellBT-Bold.otf') format('opentype');
+    font-weight: bold;
+  }
+  
+  @font-face {
+    font-family: 'SnellBT-Regular';
+    src: url('./fonts/SnellBT-Regular.otf') format('opentype');
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: 'SnellRoundhand-BlackScript';
+    src: url('./fonts/SnellRoundhand-BlackScript.otf') format('opentype');
+    font-weight: 900; /* Muy grueso */
+  }
+  
+  @font-face {
+    font-family: 'SnellRoundhand-BoldScript';
+    src: url('./fonts/SnellRoundhand-BoldScript.otf') format('opentype');
+    font-weight: bold;
+  }
+  
+
+
+
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:  'SnellBT-Regular';
+    background-color: #f4efe9; /* Fondo claro */
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinea los elementos desde la parte superior */
+    align-items: center;
+    overflow: auto; /* Permite hacer scroll */
+}
+
+/* Agrega aquí el scroll suave */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px; /* Ajusta este valor según el tamaño de tu menú */
+}
+
+/* Barra de navegación */
+.navbar {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra los elementos en el contenedor */
+    padding: 10px 10px;
+    color: rgb(54, 77, 23);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-left {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    margin-left: 15%;  /* Esto asegura que el texto "Susana y Miguel" se mantenga centrado a la izquierda */
+}
+
+.nav-link {
+    margin-right: 15px;
+    text-decoration: none;
+    color: rgb(54, 77, 23);
+    font-size: 2.5rem; /* Aumentamos el tamaño de las letras */
+    font-family: 'CitadelScriptStd', bold;
+    white-space: nowrap;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    margin-right: 15%;
+}
+
+.nav-links {
+    display: flex;
+    margin: 0 0px;
+    margin-right: 20px;
+}
+
+.nav-links a {
+    margin-left: 15px;
+    font-family:  'SnellBT-Regular';
+    font-size: 1rem;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+/*COntenedor fenefas decoración*/
+.deco {
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    position: absolute; /* Permite superponer otros elementos */
+    top: 90px; /* Ajusta para que quede justo debajo de la barra de navegación */
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Espacia las imágenes a izquierda y derecha */
+    pointer-events: none; /* Evita que interfiera con clics o eventos */
+    z-index: 50; /* Coloca las imágenes encima del contenido principal pero debajo de la barra de navegación */
+}
+
+.deco .div_left img {
+    width: 100px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+    margin-left: 0px; /* Espaciado desde el borde izquierdo */
+}
+
+.deco .div_right img {
+    width: 100px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+    margin-right: 0px; /* Espaciado desde el borde derecho */
+}
+
+/* Contenedor principal */
+.container {
+    text-align: center;
+    padding-top: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Contenido */
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Logo del castillo */
+.castle-logo {
+    width: 80%;
+    height: auto;
+    max-width: 100px;
+    max-height: 80vh;
+    object-fit: contain;
+    margin-bottom: 10px;
+    margin-top: 10%;
+}
+
+.name {
+    font-family: 'CitadelScriptStd';
+    color:rgb(54, 77, 23);
+    font-size: 5rem;
+}
+
+h3 {
+    color:rgb(107, 67, 10);
+}
+.fecha  {
+    font-size: 1.3rem;
+    color:rgb(107, 67, 10);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+    line-height: 1;
+    font-family: 'SnellBT-Regular';
+}
+
+.description {
+    text-align: center;
+    font-size: 1.1rem;
+    color:rgb(107, 67, 10);
+    margin-bottom: 20px;
+    line-height: 1.5;
+    max-width: 90%;
+    word-wrap: break-word;
+    margin-top: 10px;
+}
+
+.buton a {
+    background-color:rgb(54, 77, 23);
+    color: white;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+div.buton a:hover {
+    background-color: white;
+    color:  rgb(54, 77, 23);
+}
+
+
+.deco_2 {
+    max-width: 1200px;
+    width: 100%; /* Cambia de 100% a auto */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.deco_2 .div_left_2 img {
+    width: 100px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+    margin-left: 0px;
+}
+
+
+.deco_2 .div_right_2 img {
+    width: 100px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+    margin-right: 0px; /* Espaciado desde el borde derecho */
+}
+
+
+/*Decoración Bienvenida*/
+.deco_3{
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+}
+.titulo_bienve{
+    font-size: 1rem;
+    margin-bottom: 12px;
+    padding: 0%;
+}
+
+#bienvenidos{
+    background-color: white;
+}
+
+.container_text {
+    width: 100%;               /* El contenedor ocupa todo el ancho disponible */
+    max-width: 1200px;         /* Limita el ancho máximo a 1200px */
+    margin: 0 auto;            /* Centra el contenedor horizontalmente */   /* Fondo blanco */
+    box-sizing: border-box;    /* Asegura que el padding no cause desbordamientos */
+    text-align: center;        /* Centra el contenido textualmente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar efecto */
+    padding: 20px;             /* Espaciado interno para separar texto de bordes */
+}
+
+.image-banner {
+    max-width: 1200px;         /* Limita el ancho máximo de la imagen */
+    width: 100%;               /* Se adapta al contenedor si es más pequeño */
+    height: auto;              /* Mantiene las proporciones de la imagen */
+    display: block;            /* Permite usar margin para centrar */
+    margin: 20px auto;         /* Centra horizontalmente con margen superior/inferior */
+}
+
+.description {
+    font-size: 1.1rem;         /* Tamaño del texto */
+    line-height: 1.5;          /* Espaciado entre líneas */
+    color:rgb(107, 67, 10);           /* Color del texto */
+    margin-bottom: 20px;       /* Espaciado entre párrafos */
+    text-align: center;        /* Centra el texto */
+    max-width: 1200px;         /* Limita el ancho máximo del texto */
+    margin: 10px auto;         /* Centra el texto y añade espaciado */
+}
+/* Fondo blanco solo para el contenedor .container_invitados */
+.container_invitados {
+    margin-top: 30px;
+    display: flex;
+    position: relative;               /* Usamos Flexbox para alinear los elementos */
+          /* Alineación vertical */
+    justify-content: center;     /* Alinea los elementos verticalmente al centro */
+    align-items: center;         /* Alinea los elementos horizontalmente al centro */
+    padding: 30px;               /* Agrega un poco de espacio alrededor del contenido */
+    background-color: white;     /* Fondo blanco para el contenedor */
+         /* Bordes redondeados si lo deseas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle profundidad */
+    width: 100%;              
+     margin: 0 auto;              /* Centra el contenedor en la página */
+}
+
+/* Estilos para el título */
+.conoce_inv {
+    width: 100%;
+    text-align: center;          /* Centra el texto del título */
+    font-size: 24px;             /* Asegura que el tamaño de la fuente del título sea grande */
+    font-weight: bold;           /* Hace el texto del título más prominente */
+    margin-bottom: 20px;         /* Espaciado inferior */
+}
+
+.instagram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%; /* El ancho del contenedor será del 80% de la pantalla */
+    max-width: 1200px; /* Ancho máximo para asegurar un diseño equilibrado */
+    margin: 0 auto; /* Márgenes automáticos para centrar horizontalmente */
+}
+
+iframe {
+    border: none;
+    width: 100%; /* Ocupará todo el ancho del contenedor */
+    height: 70vh; /* Ajusta la altura según el tamaño de la ventana */
+    display: block;
+}
+.cuenta_atras {
+    margin-bottom: 5%;
+}
+.boton_pequeño a{
+    background-color:rgb(54, 77, 23);
+    color: white;
+    font-size: 0.8rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.programacion{
+    color: rgb(107, 67, 10);
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    padding-top: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+/* Estilos para la línea de tiempo */
+.timeline {
+    width: 100%;
+    max-width: 600px; /* Asegura que la línea de tiempo se mantenga en un ancho adecuado */
+    margin: 50px auto;
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Alinea los eventos en columna */
+    align-items: center; /* Centra los elementos en el eje horizontal */
+    justify-content: flex-start; /* Asegura que los eventos se alineen de arriba hacia abajo */
+}
+
+/* Estilos para cada evento */
+.timeline-event {
+    display: flex;
+    flex-direction: column; /* Alinea el logo, hora, título y contenido de arriba hacia abajo */
+    align-items: center; /* Centra los elementos en el eje horizontal */
+    margin: 20px 0;
+    width: 100%; /* Hace que cada evento ocupe el 100% del ancho disponible */
+    text-align: center; /* Centra el texto */
+}
+
+/* Estilos para la hora y el logo */
+.event-time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.event-time img {
+    max-width: 100px; /* Tamaño del icono */
+    max-height: 100px;
+}
+
+.event-time span {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Estilos para el contenido del evento */
+.event-info {
+
+    width: 80%; /* Controla el ancho del texto */
+}
+
+.event-info h4 {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 10px; /* Espacio entre el título y el párrafo */
+}
+
+.event-info p {
+    font-size: 1em;
+    margin-bottom: 15px; /* Espacio entre párrafos */
+}
+
+/* Estilos para los botones */
+.boton_pequeño a {
+    background-color:rgb(54, 77, 23);
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.boton_pequeño a:hover {
+    background-color: white;
+    color:  rgb(54, 77, 23);
+}
+
+
+
+/* Estilo para los puntos del evento */
+.event-time::before {
+    position: absolute;
+    left: 50%;
+    top: -7px;
+    width: 15px;
+    height: 15px;
+    background-color: #333;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+/* Estilos para el iframe de Google Maps */
+.container_text iframe {
+    margin-top: 20px;
+    width: 100%;
+    height: 400px; /* Ajusta la altura del mapa a una altura adecuada */
+    border: 0;
+    border-radius: 10px; /* Si quieres bordes redondeados */
+}
+.como_llegar{
+    white-space: nowrap;
+    margin-bottom: 12px;
+}
+#donde-dormir{
+    background-color: #f4efe9;
+}
+.container_text {
+    width: 100%; /* El contenedor ocupa todo el ancho disponible */
+    max-width: 1980px;/*stablece un ancho máximo para el contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px; /* Espaciado interno */
+}
+
+.container_text .image-banner {
+    width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Elimina el espacio en línea alrededor de la imagen */
+    object-fit: cover; /* La imagen cubre el área del contenedor sin distorsionarse */
+    border-radius: 8px; /* Bordes redondeados opcionales */
+}
+#castillo-imagen{
+    background-color: #f4efe9;
+}
+.image-banner {
+    margin-top: 5%;
+}
+#como-llegar{
+    background-color: white;
+}
+#donde-dormir{
+    box-shadow: none;
+}
+
+
+
+
+/* Estilos para pantallas grandes */
+@media (min-width: 768px) {
+    .container_text iframe {
+        height: 450px; /* Ajusta la altura del mapa para pantallas grandes */
+    }
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 767px) {
+    .container_text iframe {
+        width: 100%;
+        height: 300px; /* Ajusta la altura del mapa para pantallas móviles */
+    }
+    
+}
+
+
+
+/* Estilos para pantallas grandes */
+@media (min-width: 768px) {
+    .nav-link {
+        font-size: 2.5rem;
+        display: flex;
+    align-content: center;
+    align-items: center;
+    }
+
+    .nav-links a {
+        font-size: 1.6rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1.3rem;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .castle-logo {
+        width: 100%;
+        max-width: 1000px;
+        max-height: 60vh;
+    }
+
+    .buton a {
+        font-size: 1.4rem;
+    }
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 767px) {
+    .navbar {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 10px 10px;
+        display: flex;
+    align-content: center;
+    align-items: center;
+        
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #f4efe9;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 999;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-link {
+        font-size: 2rem;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+        background-color: white;
+        color: rgb(54, 77, 23);;
+        font-size: 1.5rem;
+    }
+
+    .nav-right {
+        margin-right: 5%;
+    }
+
+    .nav-left {
+        font-size: 0.8rem;
+        flex: 1;
+        margin-left: 5%;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 2.5rem;
+        margin-right: 10px;
+    }
+
+    .container {
+        padding-top: 40px;
+    }
+
+    .castle-logo {
+        width: 80%;
+        max-width: 600px;
+        max-height: 60vh;
+        margin-top: 12%;
+        margin-bottom: 0%;
+        padding-bottom: 0%;
+    }
+
+    .name {
+        font-size: 3rem;
+    }
+
+    .title {
+        font-size: 1.4rem;
+    }
+
+    .description {
+        font-size: 0.8rem;
+    }
+
+    .buton a {
+        
+        margin-top: 0%;
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+}
+@media (max-width: 600px) {
+    .elfsight-app-d97fd269-2630-46bd-9c38-aa65577ecec6 {
+        grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+    }
+}
+
+/* Para pantallas medianas (tabletas) se muestran en 2 columnas */
+@media (min-width: 601px) and (max-width: 900px) {
+    .elfsight-app-d97fd269-2630-46bd-9c38-aa65577ecec6 {
+        grid-template-columns: repeat(1, 1fr); /* 2 columnas en pantallas medianas */
+    }
+}
+
+/* Para pantallas grandes (escritorios) se muestran en 3 columnas */
+@media (min-width: 901px) {
+    .elfsight-app-d97fd269-2630-46bd-9c38-aa65577ecec6 {
+        grid-template-columns: repeat(1, 1fr); /* 3 columnas en pantallas grandes */
+    }
+}
+

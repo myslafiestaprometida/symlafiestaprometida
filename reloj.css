@@ -1,0 +1,129 @@
+/* General */
+@font-face {
+  font-family: 'CitadelScriptStd';
+  src: url('./fonts/CitadelScriptStd.otf') format('opentype'); /* Asegúrate de usar la extensión correcta */
+  font-weight: 700; /* Ajusta el peso si es necesario */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.contenedor {
+  color:rgb(107, 67, 10);
+  text-align: center;
+  padding-bottom: 10px;
+  margin-top: 0%;
+}
+
+.contenedor .contenido {
+  width: 100%;                /* Asegúrate de que ocupe todo el ancho */
+  overflow-x: auto;           /* Permite el desplazamiento horizontal si es necesario */
+  display: flex;              /* Flexbox para organizar los elementos en fila */
+  flex-wrap: nowrap;          /* Evita que los elementos salten a la siguiente línea */
+  justify-content: center;    /* Centra los elementos si hay espacio disponible */
+  gap: 20px;                  /* Espacio entre elementos */
+}
+
+.contador {
+  display: flex;
+  flex-wrap: nowrap;          /* Asegura que permanezcan en una sola fila */
+  justify-content: center;
+  gap: 10px;
+}
+
+.responsivo1,
+.responsivo2 {
+  display: flex;
+  flex-wrap: nowrap;          /* Mantén los elementos en fila horizontal */
+  flex-direction: row;
+  justify-content: center;
+}
+
+.cartel {
+  width: 109px;
+  height: 109px;
+  padding: 10px 0px 5px 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  border: 1px solid rgb(107, 67, 10);
+  border-radius: 5px;
+}
+
+.cartel > div {
+  font-size: 50px;
+  font-family: 'CitadelScriptStd', sans-serif;
+  animation: fade 3s;
+  line-height: 30px;
+  margin-top: 3px;
+}
+
+.cartel > div > h3 {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.h3 {
+  margin: 0 auto;
+}
+
+@keyframes fade {
+  0%   { opacity: 0; }
+  30%  { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Media Queries */
+@media (max-width: 450px) {
+  .contenedor {
+    margin-top: 0%;
+    margin-bottom: 10px;
+    padding-bottom: 0%;
+  }
+  
+  .contenido {
+    width: 100%;
+    overflow-x: auto;          /* Permite desplazamiento horizontal */
+  }
+
+  .contador {
+    flex-wrap: nowrap;         /* Asegura que todo esté en una fila */
+    gap: 3px;
+  }
+
+  .cartel {
+    width: 75px;
+    height: 75px;
+    color:rgb(107, 67, 10);
+  }
+
+  .cartel > div {
+    font-size: 25px;
+  }
+
+  .cartel > div > h3 {
+    font-size: 20px;
+    margin-top: 0px;
+  }
+  #dias{
+    font-size: 40px;
+  }
+  #horas{
+    font-size: 40px;
+  }
+  #minutos{
+    font-size: 40px;
+  }
+  #segundos{
+    font-size: 40px;
+  }
+
+
+}
