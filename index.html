@@ -383,16 +383,7 @@
             });
         });
     </script>
-    <script>
-        // Recargar la página una vez al completar la carga
-        window.onload = function() {
-            // Evita un bucle infinito verificando si ya fue recargada
-            if (!window.location.hash.includes('reloaded')) {
-                window.location.hash = 'reloaded';
-                window.location.reload();
-            }
-        };
-    </script>
+    
 </body>
 </html>
 
