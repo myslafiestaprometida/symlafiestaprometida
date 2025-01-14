@@ -138,7 +138,6 @@
             src="https://d97fd269263046bd9c38aa65577ecec6.elf.site" 
             frameborder="0" 
             id="dynamic-iframe"
-            scrolling="no"
             style="width: 100%; overflow: hidden;"
         ></iframe>
     </div>
@@ -207,7 +206,7 @@
                 </div>
                 <div class="event-info">
                     <h4>Cena</h4>
-                    <p>Los invitados disfrutarán de una deliciosa cena en la explanada exterior del casttillo, rodeados de buena compañía.</p>
+                    <p>Los invitados disfrutarán de una deliciosa cena en el salón principal, rodeados de buena compañía.</p>
                 </div>
             </div>
         
@@ -331,7 +330,7 @@
                 <img src="img/fenefa_letras_IZQ.svg" alt="Fenefa derecha">
             </div>
             <div >
-                <h3 class="como_llegar">¡Nos vemos en la fiesta!</h3>
+                <h3 class="como_llegar">Nos vemos en la fiesta</h3>
             </div>
             <div >
                 <img src="img/fenefa_letras_derecha.svg" alt="Fenefa izquierda">
@@ -383,6 +382,16 @@
                 navLinks.classList.remove('active'); // Cierra el menú
             });
         });
+    </script>
+    <script>
+        // Recargar la página una vez al completar la carga
+        window.onload = function() {
+            // Evita un bucle infinito verificando si ya fue recargada
+            if (!window.location.hash.includes('reloaded')) {
+                window.location.hash = 'reloaded';
+                window.location.reload();
+            }
+        };
     </script>
 </body>
 </html>

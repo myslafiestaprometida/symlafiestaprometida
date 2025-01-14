@@ -43,7 +43,6 @@
 }
 
 body {
-    font-family:  'SnellBT-Regular';
     background-color: #f4efe9; /* Fondo claro */
     height: 100vh;
     margin: 0;
@@ -186,6 +185,8 @@ html {
 }
 
 h3 {
+    font-family:  'SnellBT-Regular';
+    font-size: 2em;
     color:rgb(107, 67, 10);
 }
 .fecha  {
@@ -222,6 +223,7 @@ h3 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease;
     white-space: nowrap;
+    font-family: 'SnellBT-Regular';
 }
 
 div.buton a:hover {
@@ -252,9 +254,15 @@ div.buton a:hover {
     margin-right: 0px; /* Espaciado desde el borde derecho */
 }
 
+.titulo_bienve{
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    padding: 0%;
+}
 
 /*Decoración Bienvenida*/
 .deco_3{
+    font-size: 0.5em;
     margin-top: 20px;
     width: 100%;
     padding: 10px;
@@ -262,13 +270,8 @@ div.buton a:hover {
     position: relative;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 5px;
     text-align: center;
-}
-.titulo_bienve{
-    font-size: 1rem;
-    margin-bottom: 12px;
-    padding: 0%;
 }
 
 #bienvenidos{
@@ -293,9 +296,10 @@ div.buton a:hover {
     margin: 20px auto;         /* Centra horizontalmente con margen superior/inferior */
 }
 
-.description {
-    font-size: 1.1rem;         /* Tamaño del texto */
-    line-height: 1.5;          /* Espaciado entre líneas */
+.description {    
+    
+    font-size: 1em;
+    margin-bottom: 15px; 
     color:rgb(107, 67, 10);           /* Color del texto */
     margin-bottom: 20px;       /* Espaciado entre párrafos */
     text-align: center;        /* Centra el texto */
@@ -327,20 +331,14 @@ div.buton a:hover {
     margin-bottom: 20px;         /* Espaciado inferior */
 }
 
-.instagram {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%; /* El ancho del contenedor será del 80% de la pantalla */
-    max-width: 1200px; /* Ancho máximo para asegurar un diseño equilibrado */
-    margin: 0 auto; /* Márgenes automáticos para centrar horizontalmente */
-}
-
-iframe {
-    border: none;
+.instagram iframe {
     width: 100%; /* Ocupará todo el ancho del contenedor */
-    height: 70vh; /* Ajusta la altura según el tamaño de la ventana */
+    height: 80vh; /* Ajusta la altura según sea necesario */
     display: block;
+    overflow-x: auto;
+    overflow-y: hidden; /* Habilita el scroll horizontal */
+    /* Asegura que los elementos hijos no se envuelvan */
+    scroll-behavior: smooth; /* Desplazamiento suave */
 }
 .cuenta_atras {
     margin-bottom: 5%;
@@ -358,6 +356,7 @@ iframe {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease;
     white-space: nowrap;
+    font-family:  'SnellBT-Regular';
 }
 
 .programacion{
@@ -410,6 +409,7 @@ iframe {
 }
 
 .event-time span {
+    font-family: 'SnellBT-Regular';
     font-size: 1.2em;
     font-weight: bold;
 }
@@ -423,11 +423,13 @@ iframe {
 .event-info h4 {
     font-size: 1.3em;
     font-weight: bold;
-    margin-bottom: 10px; /* Espacio entre el título y el párrafo */
+    margin-bottom: 10px; 
+    font-family: 'SnellBT-Regular';/* Espacio entre el título y el párrafo */
 }
-
+/*-------------------------------------------------------------*/
 .event-info p {
     font-size: 1em;
+    color: rgb(63, 39, 5);;
     margin-bottom: 15px; /* Espacio entre párrafos */
 }
 
@@ -479,6 +481,7 @@ iframe {
     background-color: #f4efe9;
 }
 .container_text {
+    font-size: 1em; /*-------------------------------------------*/
     width: 100%; /* El contenedor ocupa todo el ancho disponible */
     max-width: 1980px;/*stablece un ancho máximo para el contenedor */
     margin: 0 auto; /* Centra el contenedor horizontalmente */
@@ -506,7 +509,9 @@ iframe {
 }
 
 
-
+p{
+    font-size: 1em;
+}
 
 /* Estilos para pantallas grandes */
 @media (min-width: 768px) {
@@ -671,5 +676,9 @@ iframe {
     .elfsight-app-d97fd269-2630-46bd-9c38-aa65577ecec6 {
         grid-template-columns: repeat(1, 1fr); /* 3 columnas en pantallas grandes */
     }
+}
+p{
+    font-size: 1em;
+    font-family: Helvetica, sans-serif;
 }
 
